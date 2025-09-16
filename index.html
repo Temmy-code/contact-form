@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form action="" method="post">
+        <div class="form_1">
+          <div class="input">
+            <label class="label">First Name *</label>
+            <input class="see" required type="text" />
+          </div>
+          <div class="input">
+            <label class="label">Last Name *</label>
+            <input required type="text" />
+          </div>
+        </div>
+        <div>
+          <div class="input form_2">
+            <label class="label">Email Address *</label>
+            <input required type="email" />
+          </div>
+        </div>
+
+        <div class="form_3">
+          <label class="label">Query Type *</label>
+          <div class="radio">
+            <div class="input">
+              <label><input required type="radio" /> General Enquiry</label>
+            </div>
+            <div class="input">
+              <label><input type="radio" />Support Request</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input form_2">
+          <label class="label">Message *</label>
+          <textarea
+            placeholder="Type here..."
+            required
+            name=""
+            id=""
+          ></textarea>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input required type="checkbox" name="" id="" /> I consent to being
+            contacted by the team *</label
+          >
+        </div>
+
+        <div class="button_wrap">
+          <!-- <button type="submit">Check</button> -->
+          <button id="open_modal" class="alert" type="reset">Submit</button>
+          <dialog id="my_modal">
+            <div class="title">
+              <img class="img" src="./assets/images/icon-success-check.svg" width="10px"  alt="img">
+              <h6>Message Sent!</h6>
+            </div>
+            <p>Thanks for completing the form. We'll be in touch soon</p>
+            <button id="close">Close</button>
+          </dialog>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

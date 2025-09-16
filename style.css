@@ -1,0 +1,414 @@
+:root {
+  --Green: hsl(148, 38%, 91%);
+  --Green-light: hsl(175, 95%, 8%);
+  --Green-medium: hsl(169, 82%, 27%);
+  --Green-dark: hsl(169, 82%, 17%);
+  --Red-dark: hsl(0, 95%, 45%);
+  --Red: hsl(0, 100%, 49%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-light: hsl(185, 9%, 75%);
+  --Grey-medium: hsl(186, 15%, 59%);
+  --Grey-darker: hsl(187, 24%, 22%);
+
+  /* font */
+  --Font-size-h1: 18px;
+  --Font-size-labels: 8px;
+  --Family: "Karla", "poppins";
+  --Font-Weights-1: 600;
+  --Font-Weights-2: 700;
+  --Font-Weights-3: 900;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--Green);
+  background-image: linear-gradient(145deg, var(--Green), var(--Green-medium));
+  font-family: var(--Family);
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.6rem;
+  /* font-weight: var(--Font-Weights-1); */
+  color: var(--Green-medium);
+  outline: none;
+}
+
+input, textarea{
+    outline: none;
+    padding: 0.5rem ;
+}
+
+.container {
+  background-color: var(--White);
+  padding: 1.3rem;
+  border-radius: 1rem;
+  width: 40%;
+}
+
+.container h1 {
+  color: var(--Green-dark);
+  font-size: var(--Font-size-h1);
+  font-weight: var(--Font-Weights-3);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.form_1 {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 2.55rem; */
+  width: 99%;
+}
+
+.form_1 .input {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.form_1 .input input {
+  width: 93%;
+  height: 1.5rem;
+  border: 1px solid var(--Grey-medium);
+  border-radius: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.form_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.form_2 input {
+  width: 95.5%;
+  height: 1.5rem;
+  border: 1px solid var(--Grey-medium);
+  border-radius: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.form_2 textarea {
+  width: 95.5%;
+  height: 4rem;
+  border: 1px solid var(--Grey-medium);
+  border-radius: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.form_3{
+    width: 100%;
+}
+
+.radio {
+  /* background-color: rgb(38, 85, 195); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.radio label {
+  text-align: center;
+  justify-content: left;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  font-size: 0.6rem;
+  color: var(--Green-dark);
+  user-select: none;
+}
+
+.radio .input label input{
+  margin-bottom: 2px;
+}
+
+.radio .input {
+  accent-color: var(--Green-medium);
+  width: 38%;
+  border: 1px solid var(--Grey-medium);
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  /* margin-right: 20px; */
+  /* background-color: red; */
+}
+
+.checkbox {
+  /* background-color: aqua; */
+  font-size: 0.8rem;
+  width: 100%;
+}
+.checkbox label {
+  /* background-color: rgb(137, 8, 103); */
+  font-size: 0.5rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.checkbox label input {
+  accent-color: var(--Green-medium);
+  width: 10px;
+}
+
+/* ----TARGETING A PARTICULAR BUTTON (2 WAYS) ---- */
+
+/* button:nth-of-type(1)  {
+    background-color: var(--Green-medium);
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    color: var(--White);
+    font-size: 0.6rem;
+    border-radius: 5px;
+}
+
+button:nth-of-type(2) {
+  background-color: var(--Red);
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  color: var(--White);
+  font-size: 0.6rem;
+  border-radius: 5px;
+} */
+
+
+.button_wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button[type="reset"] {
+  background-color: var(--Green-medium);
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  color: var(--White);
+  font-size: 0.8rem;
+  border-radius: 5px;
+  width: 60%;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  width: 30%;
+  background-color: var(--Red);
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  color: var(--White);
+  font-size: 0.6rem;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+/* HOVER STATES */
+
+input:hover,
+textarea:hover,
+.form_1 .input input:hover,
+.radio .input:hover {
+  /* background-color: brown; */
+  cursor: pointer;
+  border: 1px solid var(--Green-medium);
+}
+
+/* another way to do this is add class="hover" to each of these elements */
+
+/* .hover:hover{
+    cursor: pointer;
+    border: 1px solid var(--Green-medium);
+} */
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Red-dark);
+}
+
+button[type="reset"]:hover{
+  cursor: pointer;
+  background-color: var(--Green-dark);
+}
+
+/* FOCUS AND ACTIVE STATES*/
+
+input:focus, textarea:focus, .form_1 .input input:focus{
+  border: 2px solid var(--Green-medium);
+}
+
+input:active, textarea:active, .form_1 .input input:active, .radio .input:active{
+    background-color: var(--Green);
+}
+
+button:nth-of-type(2):active{
+    background-color: var(--Grey-medium)
+}
+
+/* MODAL  */
+
+dialog{
+  margin: 1% auto;
+  /* width: 30%; */
+  /* height: 30%; */
+  background-color: var(--Green-dark);
+  color: var(--White);
+  display: flexbox;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: -30px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+dialog p{
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.title{
+  display: flex;
+  gap: 0.5rem;
+  margin: -25px 0;
+}
+
+.img{
+  filter: drop-shadow(4px 4px 4px black);
+  filter: grayscale(40deg);
+}
+
+#close{
+  /* width: 100%; */
+  /* max-width: 25%; */
+  min-width: 30%;
+  background-color: var(--Green);
+  outline: none;
+  border: none;
+  padding: 0.4rem;
+  margin-top: 5px;
+  color: var(--Green-dark);
+  font-size: 0.5rem;
+  font-weight: 900;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+#close:hover {
+  cursor: pointer;
+  background-color: var(--White);
+}
+
+
+@media  (max-width:375px), (max-width:857px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    .container{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+        /* background-color: rgb(230, 208, 250); */
+    }
+    .container h1 {
+        text-align: center;
+      }
+      
+      /* .container form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      } */
+      
+      .form_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+      }
+
+      .form_1 .input {
+        width: 100%;
+      }
+      
+      .form_1 .input input {
+        height: 1rem;
+      }
+        
+      .form_2 input {
+        height: 1rem;
+        width: 91%;
+      }
+      
+      .form_2 textarea {
+        width: 91%;
+        height: 5.5rem;
+      }
+      
+      .form_3{
+          width: 100%;
+      }
+      
+      .radio {
+        /* background-color: rgb(38, 85, 195); */
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+        height: 90px;
+      }
+      
+      
+      .radio .input label input{
+        margin-bottom: 3px;
+      }
+      
+      .radio .input {
+        width: 90%;
+        padding: 0.5rem;
+      }
+      
+      .checkbox {
+        /* background-color: aqua; */
+        font-size: 0.8rem;
+        width: 100%;
+      }
+      .checkbox label {
+        font-size: 0.5rem;
+        width: 100%;
+      }
+      .checkbox label input {
+        accent-color: var(--Green-medium);
+        width: 20px;
+      }
+
+      .button_wrap{
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      button:nth-of-type(1){
+        width: 100%;
+      }
+      button:nth-of-type(2){
+        width: 100%;
+      }
+}
